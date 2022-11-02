@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESAD - Design numérique - Workshops Test-it !</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="cssbox.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+     <!-- une div qui contient tout-->
+    <div id="wrapper">
+      
+       <!-- la navigation= : bouton/titre et menu/liste -->
+      <nav>
+        <div id="openbtn" onclick="openNav()"><span>&#9776;</span> Test-it !</div>
+        
+        <div id="menu">
+          <div id="closebtn" onclick="closeNav()"><span>&times;</span> Test-it !</div>
+          <ul id="menuliste">
+            <li onclick="openpage(0), closeNav()"><strong>welcome !</strong></li>
+            <li>...</li>
+            <li onclick="openpage(1), closeNav()"><em>Sonogramme</em></li>
+            <li onclick="openpage(2), closeNav()"><em>« Je ne suis pas sûr »</em></li>
+            <li onclick="openpage(3), closeNav()"><em>Augmentation</em></li>
+            <li onclick="openpage(4), closeNav()" style="opacity:.6;"><em>Superform</em></li>
+            <li onclick="openpage(4), closeNav()" style="opacity:.6;"><em>Petites-Annonces</em></li>
+            <li onclick="openpage(4), closeNav()" style="opacity:.6;"><em>Texte-Fiction</em></li>
+            <li onclick="openpage(4), closeNav()" style="opacity:.6;"><em>Splash-Screen</em></li>
+            <li onclick="openpage(4), closeNav()" style="opacity:.6;"><em>Typo Bones</em></li>
+            <li onclick="openpage(4), closeNav()" style="opacity:.6;"><em>Sound-keys</em></li>
+          </ul>
+        </div>
+      </nav>
+      
+   <!-- ici la div qui contient la page qui va être chargée -->
+   <div id="content" onmouseover="closeNav()"><iframe src="page0.html"></iframe></div>
+    
+
+    <!-- On importe le javascript -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

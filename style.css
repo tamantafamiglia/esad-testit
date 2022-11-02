@@ -1,0 +1,190 @@
+/* CSS files add styling rules to your content */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow: hidden;
+  background-color: #ccc;
+}
+/* Ici, la page principale qui enveloppe tout, et la zone contenu qui va charger les pages externes */
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+#content {
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+#home {
+  width:100vw;
+  height:100vh;
+  /* display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  
+  overflow: auto;
+  margin:0 auto;
+}
+
+#home h1 {
+  font-size: 5vmax;
+  margin:10vh auto 3vh;
+  text-align: center;
+  border-bottom: #000 dotted 1px;
+  padding-bottom:5vh;
+  width:70vw;
+  
+}
+
+#home h2 {
+  font-size: 2vmax;
+  margin:10vh auto 3vh;
+  text-align: center;
+  border-top: #000 dotted 1px;
+  padding-top:5vh;
+  width:70vw;
+  position:relative;
+}
+.note {
+  position:relative;
+  cursor: pointer;
+}
+.note:hover {
+  color:#00f;
+}
+.note span {
+  display:none;
+  position: absolute;
+  top: 5vh;
+  right: -5vh;
+  border-radius: 1vmin;
+}
+.note:hover span {
+  padding:1vmin;
+  padding-top:2vh;
+  display:block;
+  width:20vw;
+  height:auto;
+  font-size:1vmax;
+  text-align: left;
+  background-color: #ddd;
+  box-shadow: #0000ff50 5px 5px 20px;
+}
+#home p, #home ol, #home ul {
+  font-size:1.4vmax;
+  width:45vw;
+  min-width: 400px;
+  margin:1vh auto;
+  hyphens: auto;
+  text-align: left;
+}
+#content iframe {
+  border: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#home iframe {
+display:flex;
+border: none;
+margin:5vh auto 5vh;
+}
+#home iframe:last-child {
+  margin:5vh auto 20vh;
+  }
+
+/* Ici, tout concerne le navigation/menu */
+nav {
+  z-index: 999;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#menu {
+  width: 0;
+  background-color: #00f;
+  overflow-x: hidden;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: .1vw 0 1vw #999;
+}
+
+/* Ici, la liste du menu */
+#menu ul {
+  margin-top: 2vh;
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin-left: 2vw;
+}
+
+#menu li {
+  margin-right: 2vw;
+  font-size: 2.2vmin;
+  line-height: 3.3vmax;
+  cursor: pointer;
+  margin-bottom: 0.2vh;
+  color: #999;
+}
+
+#menu li:hover {
+  color: #fff;
+}
+
+/* CIci les boutons menu hamburger et close avec le titre du site*/
+#closebtn,
+#openbtn {
+  cursor: pointer;
+  user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.8rem;
+  margin: 1vh 1vw;
+  font-weight: normal;
+  min-width: 40vw;
+}
+#closebtn span,
+#openbtn span {
+  min-width: 3vw;
+}
+#closebtn span {
+  font-size: 3rem;
+}
+
+#closebtn {
+  color: #999;
+}
+#closebtn:hover {
+  color: #fff;
+}
+
+#openbtn {
+  color: #000;
+}
+#openbtn:hover {
+  color: #00f;
+}
+
+
+
+
+
+/* Galerie complément CSSbox */
+.cssbox {
+  display: flex;
+    justify-content: space-evenly;
+    margin: 5vh auto;
+    width: 62vw;
+    flex-wrap: wrap;
+}
+.cssbox_thumb {
+  width:20vw;
+  height:auto;
+}

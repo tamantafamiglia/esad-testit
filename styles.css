@@ -1,0 +1,360 @@
+/* CSS générales */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow: hidden;
+  background-size: cover;
+  background: url('medias/fond.gif'), radial-gradient(circle,#747373, #dddddd);
+    background-size:contain;
+    background-position: center center;
+    animation: gradient 32s linear infinite;
+    animation-direction: alternate;
+  
+}
+/* Ici, la page principale qui enveloppe tout, et la zone contenu qui va charger les pages externes */
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+#content {
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+#home {
+  width:100vw;
+  height:100vh;
+  /* display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  overflow: auto;
+  margin:0 auto;
+  margin-bottom: 15vh;
+}
+#home p:last-child, #home div:last-child, #home ul:last-child {
+  margin-bottom: 15vh;
+}
+#home p:first-child, #home div:first-child {
+  margin-top: 15vh;
+}
+
+#home h1 {
+  font-size: 5vmax;
+  margin:10vh auto 3vh;
+  text-align: center;
+  border-bottom: #000 dotted 1px;
+  padding-bottom:5vh;
+  width:70vw;
+  
+}
+#home h1 span {
+  margin-top:2vh;
+  font-style: italic;
+  
+  font-weight: 300;
+}
+
+#home h2 {
+  font-size: 2vmax;
+  margin:10vh auto 3vh;
+  text-align: center;
+  border-top: #000 dotted 1px;
+  padding-top:5vh;
+  width:70vw;
+  position:relative;
+}
+
+#home h2 span {
+  font-size: 1.8vmin;
+ line-height: 3vmin;
+ font-weight: normal;
+ font-style: italic;
+}
+#home h1 span .note {
+  display: inline;
+  font-size:1vmax;
+  margin-top: 0;
+  position:relative;
+  cursor: pointer;
+}
+.note:hover {
+  color:#00f;
+  cursor:pointer;
+}
+.note span {
+  display:none;
+  position: absolute;
+  font-size:1vmax;
+  top: 5vh;
+  right: -5vh;
+  border-radius: 1vmin;
+}
+.note:hover span {
+  padding:1vmin;
+  padding-top:2vh;
+  display:block;
+  top: 20vh;
+  right: 20vw;
+  width:20vw;
+  height:auto;
+  font-size:1vmax;
+  text-align: left;
+  background-color: #ddd;
+  box-shadow: #0000ff50 5px 5px 20px;
+}
+#home p, #home ol, #home ul {
+  font-size:1.4vmax;
+  width:60vw;
+  min-width: 400px;
+  margin:1vh auto;
+  hyphens: auto;
+  text-align: left;
+  /*color:blue;*/
+  /* font-family: 'Itim'; */
+  /*font-family: 'Reenie Beanie';*/
+  /* font-family: 'akronim'; */
+  /* font-family: 'League Script', cursive; */
+}
+#content iframe {
+  border: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#home iframe {
+display:flex;
+border: none;
+margin:5vh auto 5vh;
+}
+#home iframe:last-child {
+  margin:5vh auto 20vh;
+  }
+sup {
+  font-size:70%;
+}
+#home img.inser {
+  max-height:50vw;
+  width:auto;
+  display: flex;
+  justify-self: center;
+  margin:0 auto;
+}
+
+P span {
+  font-size: 70%;
+}
+
+/* ///// Les logo et images constantes dans l'UI ////// */
+#logo-esad  {
+  width: 10vw;
+    height: auto;
+    margin: 2vh 2vw;
+    position: absolute;
+    bottom: 0;
+    opacity:.75;
+}
+#logo-planetarium  {
+  width: 10vw;
+    height: auto;
+    margin: 2vh 2vw;
+    position: absolute;
+    bottom: 0;
+    left: 12vw;
+    opacity:.75;
+}
+.download {
+  display: flex;
+  flex-direction: column;
+    font-size: 16vmin;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.download span {
+  display:block;
+  font-size: 5vmin;
+}
+
+/* ///////////////////////// Ici, tout concerne la navigation/menu //////////////////////////////////////////////////////*/
+nav {
+  z-index: 999;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#menu {
+  width: 0;
+  background-color: #00f;
+  overflow-x: hidden;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: .1vw 0 1vw #999;
+}
+
+/* Ici, la liste du menu */
+#menu ul {
+  margin-top: 2vh;
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin-left: 2vw;
+ width:50vw;
+}
+
+#menu li {
+  margin-right: 2vw;
+  font-size: 2vmin;
+  line-height: 4vmin;
+  cursor: pointer;
+  margin-bottom: 0.2vh;
+  color: #999;
+}
+
+#menu li:hover {
+  color: #fff;
+}
+
+
+/* Ici les boutons menu hamburger et close avec le titre du site*/
+#closebtn,
+#openbtn {
+  cursor: pointer;
+  user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.8rem;
+  margin: 1vh 1vw;
+  font-weight: normal;
+  min-width: 40vw;
+}
+#closebtn span,
+#openbtn span {
+  min-width: 3vw;
+}
+#closebtn span {
+  font-size: 3rem;
+}
+
+#closebtn {
+  color: #999;
+}
+#closebtn:hover {
+  color: #fff;
+}
+
+#openbtn {
+  color: #000;
+}
+#openbtn:hover {
+  color: #00f;
+}
+
+/* /////////////// Animations ///////////////// */
+@keyframes gradient {
+  0% {background-size: 100%;}
+  100% {background-size: 200%;}
+}
+
+/* ///////////////////// Autres éléments du site /////////////////// */
+/* Galerie complément CSSbox */
+.cssbox {
+  display: flex;
+    justify-content: space-evenly;
+    margin: 5vh auto;
+    width: 62vw;
+    flex-wrap: wrap;
+}
+.cssbox_thumb {
+  width:20vw;
+  height:auto;
+}
+/* Fichiers audio vidéo */
+
+.player {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+audio {
+  margin-left:2vw;
+}
+
+.video-container {
+  /* width is set as 100% here. any width can be specified as per requirement */
+  width: 60%;
+  /* padding-top: 34%; 
+  height: 0px;*/
+  position: relative;
+  margin:0 auto 10vh auto;
+  
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  border-radius:2vmin;
+}
+
+/* Et ici le responsive */
+@media only screen and (max-width: 600px) {
+  #home p, #home ol, #home ul {
+    font-size:3vmax;
+    min-width:300px;
+    width:90vw;
+  }
+  #home h1 {
+     line-height: 6.6vmax;
+     font-size: 5vmax;
+     
+  } 
+
+  #home h2 {
+    font-size: 3vmax;
+    
+ } 
+  #home h2 span {
+     font-size: 1.8vmin;
+    line-height: 4vmin;
+  }
+  #menu li {
+    margin-bottom:2.2vmin;
+    font-size: 3vmin;
+    border-bottom: dotted 1px #99999990;
+    padding-bottom:.6vmin;
+  }
+  #menu ul {
+    margin-left:1.5vw;
+    width:49vw;
+  }
+  #logo-esad  {
+    width: 14vw;
+  }
+  #logo-planetarium  {
+    width: 17vw;
+    left: 17vw;
+  }
+
+
+
+
+  #home p.player {
+    font-size: 3.2vmax;
+  }
+  .video-container {
+    width: 90%;
+    padding-top: 50%;
+}
+}
